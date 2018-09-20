@@ -21,9 +21,13 @@ library(tidyverse)
 Problem1_df = tibble(
   x = runif(10, min=0, max=5), 
   vec_numeric = c(x>2),
-  vec_char = c("Giraffe", "Elephant", "Lion", "Wolf", "Dolphin", "Ant", "Dog", "Tiger", "Bird", "Fish" ),
-  vec_logical = c(TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
-  vec_factor = factor(c("African descent", "White", "Asian", "Native American", "Virgin Islander", "St. Thomas", "St. John", "Croix", "Florida", "Atlanta"))
+  vec_char = c("Giraffe", "Elephant", "Lion", "Wolf", "Dolphin", "Ant", "Dog", 
+               "Tiger", "Bird", "Fish" ),
+  vec_logical = c(TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, 
+                  FALSE),
+  vec_factor = factor(c("African descent", "White", "Asian", "Native American", 
+                        "Virgin Islander", "St. Thomas", "St. John", "Croix", 
+                        "Florida", "Atlanta"))
   )
 ```
  
@@ -32,12 +36,12 @@ Problem1_df = tibble(
 
 mean(Problem1_df$x)
 
-# This works because it is  numeric variable. 
+# This works because it is numeric variable. 
 #The mean of x equals 2.136482.
 ```
 
 ```{r}
-# Taking mean of vec_charatcer
+# Taking mean of vec_numeric
 
 mean(Problem1_df$vec_numeric)
 
@@ -46,5 +50,29 @@ mean(Problem1_df$vec_numeric)
 ```
 
 ```{r}
+# Taking mean of vec_char
 
+mean(Problem1_df$vec_char)
+
+# This code does not work. 
+#Error message says that "this argument is not numeric or logical".
+```
+
+```{r}
+# Taking mean of vec_logical
+
+mean(Problem1_df$vec_logical)
+
+# This code does output a value for the mean of the logical vector.
+# The mean of this vector equals 0.4.
+```
+
+```{r}
+# Taking the mean of vec_factor
+
+mean(Problem1_df$vec_factor)
+
+#This code does not work becasue th vector is not numeric or logical.
+
+```
 
