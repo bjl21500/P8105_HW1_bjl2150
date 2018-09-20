@@ -18,12 +18,14 @@ knitr::opts_chunk$set(echo = TRUE)
 length(samp)
 ```
 
-## Creating logical vector
+## Creating data frame
 
 Problem1_df = tibble(
-  Samp = runif(10, min=0, max=5), 
-  vec_logical = c(samp>2),
+  x = runif(10, min=0, max=5), 
+  vec_numeric = c(x>2),
   vec_char = c("Giraffe", "Elephant", "Lion", "Wolf", "Dolphin", "Ant", "Dog", "Tiger", "Bird", "Fish" ),
-  vec_numeric = c(TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
+  vec_logical = c(TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
   vec_factor = factor(c("African descent", "White", "Asian", "Native American", "Virgin Islander", "St. Thomas", "St. John", "Croix", "Florida", "Atlanta"))
   )
+  
+Mean(x)
