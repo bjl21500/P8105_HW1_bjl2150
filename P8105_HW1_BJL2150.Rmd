@@ -7,13 +7,17 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
 ```
+
 
 # Problem 1
 
 
 ## Creating data frame
 
+```{r}
 Problem1_df = tibble(
   x = runif(10, min=0, max=5), 
   vec_numeric = c(x>2),
@@ -21,9 +25,26 @@ Problem1_df = tibble(
   vec_logical = c(TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE),
   vec_factor = factor(c("African descent", "White", "Asian", "Native American", "Virgin Islander", "St. Thomas", "St. John", "Croix", "Florida", "Atlanta"))
   )
-  
-Mean(x)
+```
+ 
+```{r} 
+# Taking mean of x variable
 
+mean(Problem1_df$x)
+
+# This works because it is  numeric variable. 
+#The mean of x equals 2.136482.
+```
 
 ```{r}
+# Taking mean of vec_charatcer
+
+mean(Problem1_df$vec_numeric)
+
+# Taking the mean of this equals 0.3. 
+#Therefore, this works.
+```
+
+```{r}
+
 
