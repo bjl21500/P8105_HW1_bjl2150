@@ -137,6 +137,7 @@ vec_factor = as.factor(Problem2_df$vec_logical)
 
 mean(x)
 median(x)
+dim(x)
 ```
 The mean of the x is `r mean(x)`.
 
@@ -144,8 +145,14 @@ The median of the x is `r median(x)`.
 
 The dataset size is dim
 
-## Making Scatterplot
+
+## Scatterplots
 ```{r}
-ggplot(Problem2_df, aes(y = y, x = x)) + geom_point(aes(color = vec_logical))
-C
+# Making scatter plots for logical, numeric and factor vectors, respectively.
+
+ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_logical))
+
+ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_numeric))
+
+ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_factor))
 ```
