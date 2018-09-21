@@ -118,9 +118,10 @@ as.numeric(Character)
 # not successful. An error message showed.
 ```
 
-## Problem 2
+# Problem 2
+
+## Creating data frame
 ```{r}
-# Created data frame for Problem 2
 x = rnorm(1000)
 y = rnorm(1000)
 vec_logical = c(x + y > 0)
@@ -136,16 +137,18 @@ vec_factor = as.factor(Problem2_df$vec_logical)
 dim(Problem2_df)
 mean(x)
 median(x)
-
+mean(Problem2_df$vec_logical)
 ```
+The logical vector was converteed to a numeric vecotr and then once more converted to a factor vector.
+The dataset size, mean, median and proportion of cases where the logical vector was TRUE is outlined below:
+
 The size of the dataset is `r dim(Problem2_df)`; 1000 rows and 3 columns.
 
 The mean of the x is `r mean(x)`.
 
 The median of the x is `r median(x)`.
 
-
-
+The proportion of case for which the logical vector is TRUE is `r mean(Problem2_df$vec_logical)`.
 
 ## Scatterplots
 ```{r}
