@@ -122,11 +122,14 @@ as.numeric(Character)
 
 ## Problem 2
 ```{r}
+# Created data frame for Problem 2
 
 Problem2_df = tibble(
   x = rnorm(1000),
   y = rnorm(1000),
   vec_logical = c(x + y > 0),
+  vec_numeric = as.numeric(Problem2_df$vec_logical),
+  vec_factor = as.factor(Problem2_df$vec_logical)
 )
 ```
 
