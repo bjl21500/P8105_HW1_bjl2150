@@ -71,7 +71,7 @@ mean(Problem1_df$vec_factor)
 ```
 This code does not work because the vector is neither numeric nor logical.
 
-```{r}
+```{r echo=T, results= 'hide'}
 ## 1st code chunk
 # Using the as.numeric function on the logical, character and factor vectors.
 
