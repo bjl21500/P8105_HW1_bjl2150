@@ -18,6 +18,8 @@ library(tidyverse)
 ## Creating data frame
 
 ```{r}
+# Used the tibble function to create Problem1_df
+
 Problem1_df = tibble(
   x = runif(10, min=0, max=5), 
   vec_numeric = c(x>2),
@@ -71,7 +73,7 @@ This code does not work because the vector is neither numeric nor logical.
 
 ```{r}
 ## 1st code chunk
-# Using the as.numeric function to the logical, character and factor vectors.
+# Using the as.numeric function on the logical, character and factor vectors.
 
 as.numeric(Problem1_df$vec_logical)
 
@@ -86,11 +88,11 @@ created. With the character vector, it could not be applied (NA).
 # 2nd code chunk
 # Converting character variable from character to factor to numeric
 
-## Created a new variable named 'Factor' that is the end product of converting
-# the character vector to the factor vector.
+# Created a new variable named 'Factor' - end product of converting the character 
+#to a factor vector.
 Factor = as.factor(Problem1_df$vec_char)
 
-#Converted the Factor variable to a numeric vector.
+#Converted the 'Factor' variable to a numeric vector.
 as.numeric(Factor)
 
 
@@ -102,7 +104,7 @@ as.numeric(Character)
 ```
 In the first portion of the code chunk, the character vector was converted from a 
 character to a factor and lastly to a numeric vector. This vector was converted 
-successfully into the factor the numeric vectors. 
+successfully into the factor and numeric vectors. 
 
 Conversion of the factor vector to the character vector was successsful. However, 
 converting that new vector (Character) into a numeric vector was not successful.
