@@ -123,16 +123,21 @@ as.numeric(Character)
 ## Problem 2
 ```{r}
 # Created data frame for Problem 2
+x = rnorm(1000)
+y = rnorm(1000)
+vec_logical = c(x + y > 0)
 
 Problem2_df = tibble(
-  x = rnorm(1000),
-  y = rnorm(1000),
-  vec_logical = c(x + y > 0),
-  vec_numeric = as.numeric(Problem2_df$vec_logical),
-  vec_factor = as.factor(Problem2_df$vec_logical))
+  x,
+  y,
+  vec_logical)
+
+vec_numeric = as.numeric(Problem2_df$vec_logical)
+vec_factor = as.factor(Problem2_df$vec_logical)
 
 mean(x)
 median(x)
 ```
+The mean of the x is `r mean(x)`.
 
-
+The median of the x is `r median(x)`.
