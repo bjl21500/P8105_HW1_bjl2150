@@ -133,15 +133,18 @@ Problem2_df = tibble(
 vec_numeric = as.numeric(Problem2_df$vec_logical)
 vec_factor = as.factor(Problem2_df$vec_logical)
 
+dim(Problem2_df)
 mean(x)
 median(x)
-dim(x)
+
 ```
+The size of the dataset is `r dim(Problem2_df)`; 1000 rows and 3 columns.
+
 The mean of the x is `r mean(x)`.
 
 The median of the x is `r median(x)`.
 
-The dataset size is dim
+
 
 
 ## Scatterplots
@@ -168,5 +171,5 @@ Plot_3 = ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_fac
 ```{r}
 # Exporting Plot_1 as a .pdf, to the folder in project directory.
 
-ggsave("Plot_1.Rmd", path = "./P8105_HW1_BJL2150_files")
+ggsave("Plot_1.pdf", path = "./P8105_HW1_BJL2150_files")
 ```
