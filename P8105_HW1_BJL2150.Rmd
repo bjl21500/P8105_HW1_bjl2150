@@ -141,3 +141,10 @@ median(x)
 The mean of the x is `r mean(x)`.
 
 The median of the x is `r median(x)`.
+
+The dataset size is dim
+
+## Making Scatterplot
+```{r}
+ggplot(Problem2_df, aes(y = y, x = x)) + geom_point(aes(color = vec_logical))
+```
