@@ -148,19 +148,25 @@ The dataset size is dim
 ```{r}
 # Making scatter plots for logical, numeric and factor vectors, respectively.
 
-Logical = ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_logical))
+Plot_1 = ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_logical))
 
 # The blue data points on the scatterplot represent the values which are TRUE.
 # The pink data points represent those values that are FALSE.
 
 
-Numeric = ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_numeric))
+Plot_2 = ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_numeric))
 
 # The blue data points represent values numeric values equal to 1.00.
 # The black data points represent numeric values that are equal to 0.00. 
 
-Factor = ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_factor))
+Plot_3 = ggplot(Problem2_df, aes(x = y, y = x)) + geom_point(aes(color = vec_factor))
 
 # The blue data points represent factor variables that are TRUE.
 # The blue data points relect factor variables that are FALSE.
+```
+
+```{r}
+# Exporting Plot_1 as a .pdf, to the folder in project directory.
+
+ggsave("Plot_1.Rmd", path = "./P8105_HW1_BJL2150_files")
 ```
