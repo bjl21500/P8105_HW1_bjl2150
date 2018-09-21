@@ -1,7 +1,7 @@
 ---
 title: "P8105_HW1_BJL2150"
 author: "Briana Lettsome"
-date: "September 18, 2018"
+date: "September 21, 2018"
 output: github_document
 ---
 
@@ -26,8 +26,8 @@ Problem1_df = tibble(
   vec_logical = c(TRUE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, 
                   FALSE),
   vec_factor = factor(c("African descent", "White", "Asian", "Native American", 
-                        "Virgin Islander", "St. Thomas", "St. John", "Croix", 
-                        "Florida", "Atlanta"))
+                        "Virgin Islander", "St. Thomian", "St. Johnian", "Crucian", 
+                        "Floridian", "Atlantian"))
   )
 ```
  
@@ -76,6 +76,7 @@ mean(Problem1_df$vec_factor)
 ```
 
 ```{r}
+## 1st code chunk
 # Using the as.numeric function to the logical, character and factor vectors.
 
 as.numeric(Problem1_df$vec_logical)
@@ -89,4 +90,44 @@ as.numeric(Problem1_df$vec_factor)
 # With the character vector, it could not be applied (NA).
 
 ```
+
+```{r}
+# 2nd code chunk
+# Converting character variable from character to factor to numeric
+
+## Created a new variable named 'Factor' that is the end product of converting
+# the character vector to the factor vector.
+
+Factor = as.factor(Problem1_df$vec_char)
+
+#Converted the Factor variable to a numeric vector.
+
+as.numeric(Factor)
+
+
+## Converting factor variable from factor to character to numeric
+
+Character = as.character(Problem1_df$vec_factor)
+
+as.numeric(Character)
+
+# In the first portion of the code chunk, the character vector was converted
+# from a character to a factor and lastly to a numeric vector. This vector was
+# converted successfully into the factor the numeric vectors. 
+
+# Conversion of the factor vector to the character vector was successsful. 
+# However, converting that new vector *Character) into a numeric vector was
+# not successful. An error message showed.
+```
+
+## Problem 2
+```{r}
+
+Problem2_df = tibble(
+  x = rnorm(1000),
+  y = rnorm(1000),
+  vec_logical = c(x + y > 0),
+)
+```
+
 
