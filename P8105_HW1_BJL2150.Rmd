@@ -129,8 +129,10 @@ Problem2_df = tibble(
   y = rnorm(1000),
   vec_logical = c(x + y > 0),
   vec_numeric = as.numeric(Problem2_df$vec_logical),
-  vec_factor = as.factor(Problem2_df$vec_logical)
-)
+  vec_factor = as.factor(Problem2_df$vec_logical))
+
+mean(x)
+median(x)
 ```
 
 
